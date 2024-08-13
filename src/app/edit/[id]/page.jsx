@@ -23,7 +23,7 @@ export default function Page({params}) {
           if (id) {
             const request=await axios.put(`/api/todo/${id}`,value)
             const response= request.data
-            if (request.status==200) {
+            if (request.status===200) {
               toast.success(response.message)
                 
                 push('/')

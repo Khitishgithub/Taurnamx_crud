@@ -21,7 +21,7 @@ export default function Page() {
         try {
           const request=await axios.post('/api/todo',value)
           const response= request.data
-          if (request.status==200) {
+          if (request.status===200) {
             toast.success(response.message)
               
               push('/')
