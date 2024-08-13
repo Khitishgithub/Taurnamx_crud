@@ -77,9 +77,9 @@ export default function Page() {
       <div className='flex justify-center items-center'>
         <div className='flex flex-col gap-10 p-8 rounded-lg shadow-xl bg-yellow-200 mt-10 w-2/4'>
           <div className='flex justify-between items-center w-full'>
-            <h1 className='font-bold text-3xl'>TODO LIST</h1>
+            <h1 className='font-bold text-3xl'>Tournamax Assignment</h1>
             <button className='rounded-none bg-customPurple px-4 py-2 text-white flex items-center' onClick={handleAdd}>
-              Add 
+              Add Topic
               <IoMdAdd className='ml-2'/>
             </button>
           </div>

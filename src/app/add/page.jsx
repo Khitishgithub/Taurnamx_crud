@@ -19,7 +19,7 @@ export default function Page() {
     }
     const handleSubmit=async()=>{
         try {
-          const request = await axios.post('/api/todo', value, { timeout: 10000 }); // 10 seconds
+          const request = await axios.post('/api/todo', value); 
 
           const response= request.data
           if (request.status===200) {
@@ -41,7 +41,7 @@ export default function Page() {
    <>
       <div className='flex justify-center  h-screen'>
              <div className='mt-8 flex gap-8 flex-col p-10 rounded-lg h-80 shadow-lg bg-customPurple'>
-                <h1 className='text-white font-bold text-2xl'>Enter Todo</h1>
+                <h1 className='text-white font-bold text-2xl'>Enter Topic</h1>
              <label class="relative block">
   {/* <span class="text-white text-lg mb-20 mt-20 ">Tittle</span> */}
   <span class="absolute inset-y-0 left-0 flex items-center pl-2">
