@@ -19,7 +19,8 @@ export default function Page() {
     }
     const handleSubmit=async()=>{
         try {
-          const request=await axios.post('/api/todo',value)
+          const request = await axios.post('/api/todo', value, { timeout: 10000 }); // 10 seconds
+
           const response= request.data
           if (request.status===200) {
             toast.success(response.message)
