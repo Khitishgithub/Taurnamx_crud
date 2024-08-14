@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 
-dotenv.config(); 
+dotenv.config();
 
 const DBConnection = async () => {
     try {
@@ -12,12 +12,12 @@ const DBConnection = async () => {
         await mongoose.connect(uri, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
-            serverSelectionTimeoutMS: 5000, 
+            serverSelectionTimeoutMS: 5000,
             socketTimeoutMS: 45000,
         });
-        console.log('mongodb connected');
+        console.log('MongoDB connected');
     } catch (error) {
-        console.log('mongodb error', error);
+        console.error('MongoDB connection error:', error);
     }
 }
 
