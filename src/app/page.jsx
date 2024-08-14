@@ -22,8 +22,8 @@ export default function Page() {
         const response = await axios.get("/api/todo");
         setTodos(response.data.todos);
       } catch (error) {
-        console.error("Error fetching todos:", error);
-        toast.error("Failed to fetch todos.");
+        console.error("Error fetching Topic:", error);
+        toast.error("Failed to fetch Topic.");
       }
     };
     fetchTodos();
@@ -52,7 +52,7 @@ export default function Page() {
       if (response.status === 200) {
         toast.success(response.data.message);
         setIsModalVisible(false);
-        setRefreshState(!refreshState); // Toggle refresh state
+        setRefreshState(!refreshState); 
       }
     } catch (error) {
       console.error("Error deleting todo:", error);
