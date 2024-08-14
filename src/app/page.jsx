@@ -55,7 +55,7 @@ export default function Page() {
         setRefreshState(!refreshState); 
       }
     } catch (error) {
-      console.error("Error deleting todo:", error);
+      console.error("Error deleting Topic:", error);
       if (error.response) {
         toast.error(error.response.data.message);
       }
